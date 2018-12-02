@@ -32,12 +32,15 @@ h1 {
 }
 
 .slider-inner {
+	 overflow: hidden;
 }
 
 .slider-slides {
+	 width: 300%;
 }
 
 .slider-slides img {
+	float: left;
   width: 450px;
   height: 320px;
 }
