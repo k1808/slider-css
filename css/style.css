@@ -31,16 +31,56 @@ h1 {
   position: relative;
 }
 
+.slider input[type="radio"] {
+  display: none;
+}
+
 .slider-inner {
-	 overflow: hidden;
+  overflow: hidden;
 }
 
 .slider-slides {
-	 width: 300%;
+  width: 300%;
 }
 
 .slider-slides img {
-	float: left;
+  float: left;
   width: 450px;
   height: 320px;
+}
+
+.slider-controls {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.slider-controls>label {
+  display: inline-block;
+  margin: 0 3px;
+  width: 10px;
+  height: 10px;
+	background-color: #cccccc;
+  border: 4px solid white;
+  border-radius: 50%;
+  box-shadow: 0 0 2px rgba(0, 0, 0, 0.8);
+  cursor: pointer;
+}
+
+
+#btn-1:checked ~ .slider-controls label[for="btn-1"],
+#btn-2:checked ~ .slider-controls label[for="btn-2"],
+#btn-3:checked ~ .slider-controls label[for="btn-3"] {
+  background-color: #666666;
+}
+
+#btn-1:checked ~ .slider-inner .slider-slides {
+  transform: translate(0);
+}
+
+#btn-2:checked ~ .slider-inner .slider-slides {
+  transform: translate(-450px);
+}
+
+#btn-3:checked ~ .slider-inner .slider-slides {
+  transform: translate(-900px);
 }
